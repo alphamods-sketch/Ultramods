@@ -7,13 +7,13 @@
 
     <style>
         /* ============================================================
-           BASE THEME VARIABLES (PURE PINK – DEFAULT)
+           BASE THEME VARIABLES (BLUE – DEFAULT)
            ============================================================ */
         :root {
-            --primary: #FF2D55;
-            --dark: #D81B60;
-            --light: #FF6B8A;
-            --faint: #FFE4EA;
+            --primary: #1E88E5;
+            --dark: #0D47A1;
+            --light: #42A5F5;
+            --faint: #E3F2FD;
             --bg-main: #FAFAFA;
             --profile-bg: #FFFFFF;
             --item-bg: #F7F7F9;
@@ -25,15 +25,15 @@
             --nav-fill-color: var(--primary);
             --nav-stroke-color: #FFFFFF;
 
-            --wingo-active-bg: #FFB3C6;
+            --wingo-active-bg: #BBDEFB;
             --wingo-inactive-bg: #F4F4F5;
             --server-btn-bg: #D4D4D8;
-            --status-box-bg: #FFECF0;
+            --status-box-bg: #E3F2FD;
             --status-val-color: var(--primary);
 
-            --pred-pending-grad: linear-gradient(135deg, #FFB3C6 0%, #FF6B8A 100%);
+            --pred-pending-grad: linear-gradient(135deg, #BBDEFB 0%, #42A5F5 100%);
             --pred-pending-text: #FFFFFF;
-            --pred-number-bg: #FF6B8A;
+            --pred-number-bg: #42A5F5;
             --pred-number-text: #FFFFFF;
 
             --device-box-text: var(--primary);
@@ -43,17 +43,17 @@
             --text-light: #FFFFFF;
             --cyan: #00B4D8;
 
-            --landing-bg-start: #FFE4E8;
-            --landing-bg-end: #FFF5F7;
-            --landing-card-bg: #FFF0F3;
-            --landing-card-border: #FFB6C1;
-            --landing-btn-grad-start: #FF8A9B;
-            --landing-btn-grad-end: #FFB6C1;
-            --landing-btn-shadow: rgba(255, 138, 155, 0.4);
+            --landing-bg-start: #E3F2FD;
+            --landing-bg-end: #BBDEFB;
+            --landing-card-bg: #BBDEFB;
+            --landing-card-border: #1E88E5;
+            --landing-btn-grad-start: #90CAF9;
+            --landing-btn-grad-end: #1E88E5;
+            --landing-btn-shadow: rgba(30, 136, 229, 0.4);
             --landing-title-color: #1A1A1A;
             --landing-sub-color: #666;
 
-            --theme-name: 'Pink';
+            --theme-name: 'Blue';
         }
 
         /* ============================================================
@@ -188,49 +188,6 @@
             --theme-name: 'Silver';
         }
 
-        /* ============================================================
-           THEME: BLUE
-           ============================================================ */
-        [data-theme="blue"] {
-            --primary: #1E88E5;
-            --dark: #0D47A1;
-            --light: #42A5F5;
-            --faint: #E3F2FD;
-            --bg-main: #FAFAFA;
-            --profile-bg: #FFFFFF;
-            --item-bg: #F7F7F9;
-
-            --header-text: #FFFFFF;
-            --header-sub: rgba(255, 255, 255, 0.9);
-            --icon-stroke: #FFFFFF;
-
-            --nav-fill-color: var(--primary);
-            --nav-stroke-color: #FFFFFF;
-
-            --wingo-active-bg: #BBDEFB;
-            --wingo-inactive-bg: #F4F4F5;
-            --server-btn-bg: #D4D4D8;
-            --status-box-bg: #E3F2FD;
-            --status-val-color: var(--primary);
-
-            --pred-pending-grad: linear-gradient(135deg, #BBDEFB 0%, #42A5F5 100%);
-            --pred-pending-text: #FFFFFF;
-            --pred-number-bg: #42A5F5;
-            --pred-number-text: #FFFFFF;
-
-            --device-box-text: var(--primary);
-
-            --landing-bg-start: #E3F2FD;
-            --landing-bg-end: #BBDEFB;
-            --landing-card-bg: #BBDEFB;
-            --landing-card-border: #1E88E5;
-            --landing-btn-grad-start: #90CAF9;
-            --landing-btn-grad-end: #1E88E5;
-            --landing-btn-shadow: rgba(30, 136, 229, 0.4);
-            --landing-title-color: #1A1A1A;
-            --landing-sub-color: #666;
-            --theme-name: 'Blue';
-        }
 
         /* ============================================================
            THEME: PURPLE (original)
@@ -1978,7 +1935,7 @@
                             Sweeg Theme
                         </div>
                         <div class="profile-item-right">
-                            <span class="theme-badge" id="current-theme-badge">Pink</span>
+                            <span class="theme-badge" id="current-theme-badge">Blue</span>
                             <svg width="26" height="26" viewBox="0 0 24 24">
                                 <path d="M12 1L14.5 4.5L19 4.5L19 9L23 12L19 15L19 19.5L14.5 19.5L12 23L9.5 19.5L5 19.5L5 15L1 12L5 9L5 4.5L9.5 4.5L12 1Z" fill="var(--primary)" style="transform-origin: center; transform: rotate(15deg);"></path>
                                 <path d="M12 7.5V16.5M7.5 12H16.5" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
@@ -2178,13 +2135,12 @@
         const defaultName = 'User';
 
         // --- THEME SYSTEM ---
-        const themes = ['pink', 'green', 'red', 'silver', 'blue', 'purple'];
+        const themes = ['blue', 'green', 'red', 'silver', 'purple'];
         const themeNames = {
-            pink: 'Pink',
+            blue: 'Blue',
             green: 'Green',
             red: 'Red',
             silver: 'Silver',
-            blue: 'Blue',
             purple: 'Purple'
         };
         let currentThemeIndex = 0;
@@ -2192,14 +2148,12 @@
         function applyTheme(themeName) {
             const root = document.documentElement;
             themes.forEach(t => root.removeAttribute('data-theme'));
-            if (themeName !== 'pink') {
+            if (themeName !== 'blue') {
                 root.setAttribute('data-theme', themeName);
             }
             const badge = document.getElementById('current-theme-badge');
             if (badge) {
-                badge.textContent = themeNames[themeName] || 'Pink';
-                badge.style.backgroundColor = getComputedStyle(root).getPropertyValue('--primary').trim() || '#FF2D55';
-                badge.style.color = getComputedStyle(root).getPropertyValue('--header-text').trim() || '#FFFFFF';
+                badge.textContent = themeNames[themeName] || 'Blue';
             }
             localStorage.setItem('bunny_theme', themeName);
         }
@@ -2215,7 +2169,7 @@
             currentThemeIndex = themes.indexOf(savedTheme);
             applyTheme(savedTheme);
         } else {
-            applyTheme('pink');
+            applyTheme('blue');
         }
 
         // --- GAME PERSISTENCE ---
@@ -3226,10 +3180,10 @@
 
                     const statusClass = w.status === 'WIN' ? 'win' : 'loss';
                     
-                    const pBg = w.pred === 'B' ? '#FFECF0' : '#E3F2FD';
-                    const pColor = w.pred === 'B' ? '#FF2D55' : '#1E88E5';
-                    const aBg = w.actual === 'B' ? '#FFECF0' : '#E3F2FD';
-                    const aColor = w.actual === 'B' ? '#FF2D55' : '#1E88E5';
+                    const pBg = w.pred === 'B' ? '#FFF3E0' : '#E3F2FD';
+                    const pColor = w.pred === 'B' ? '#F57C00' : '#1E88E5';
+                    const aBg = w.actual === 'B' ? '#FFF3E0' : '#E3F2FD';
+                    const aColor = w.actual === 'B' ? '#F57C00' : '#1E88E5';
                     
                     list.innerHTML += `<div class="history-item" style="display:flex; flex-direction:column; gap:8px;">
                         <div style="display:flex; justify-content:space-between; width:100%; border-bottom:1px solid #eee; padding-bottom:6px;">
